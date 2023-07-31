@@ -2,7 +2,8 @@
 <html>
   <head lang="en">
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <meta name="description" content="web developer experience" />
     <title>My Portfolio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -25,9 +26,11 @@
       <nav>
         <a href="#home" class="active" data-target="home">Home</a>
         <a href="#about" data-target="about">About</a>
+        <a href="#capabilities" data-target="capability">Capabilities</a>
         <a href="#portfolio" data-target="portfolio">Portfolio</a>
         <a href="#contact" data-target="contact">Contact</a>
       </nav>
+      <div class="menu-bar fd-none"><i class="bx bx-menu"></i></div>
     </header>
     <!--home section design-->
     <section class="home" id="home">
@@ -37,9 +40,10 @@
         <h3>
           <p>frontend developer<br />web developer<br />React developer</p>
         </h3>
-        <p style="width: 80%">
-          Start with a brief introduction about yourself, including your name,
-          background, and your passion for frontend development.
+        <p>
+          As over 1+ years of experience as a frontend developer, an amazing
+          thing I learnt is to keep on working on your insecurities, that be
+          coding or life.
         </p>
         <div class="explore-more">
           <p>Explore more</p>
@@ -71,36 +75,94 @@
         <h2>About <span>Me</span></h2>
         <h4>React Developer</h4>
         <p>
-          jsdhbgfh jsdgf hsd dfghgsd fdshgf hsdf hsd fsd f jsdhbgfh jsdgf hsd
-          dfghgsd fdshgf hsdf hsd fsd f
+          Fun fact about me is that I have many hobbies but not best at any
+          <i class="bx bx-laugh"></i>
         </p>
         <button type="button">Read more</button>
       </div>
     </section>
-    <!---portfolio section-->
-    <!-- <section class="portfolio" id="portfolio">
-      <h2>Latest <span> Projects</span></h2>
-
-      <div class="project-container">
-        <div class="project-cart">
-          <img src="./images/tundi.png" />
-        </div>
-        <div class="project-cart">
-          <img src="./images/tundi.png" />
-        </div>
-        <div class="project-cart">
-          <img src="./images/tundi.png" />
-        </div>
-        <div class="project-cart">
-          <img src="./images/tundi.png" />
-        </div>
-        <div class="project-cart">
-          <img src="./images/tundi.png" />
+    <!---capabilities section-->
+    <section class="capabilities-section" id="capabilities">
+      <h2>Capabilities</h2>
+      <div class="skill-container">
+        <div class="skill-cart">
+          <i></i>
+          <h3>Web Development</h3>
+          <ul>
+            <li>React js Framework</li>
+            <li>Next.js with tailwind css</li>
+            <li>JQuery</li>
+            <li>HTML, CSS, JS</li>
+          </ul>
+          <button type="button">Read more</button>
         </div>
       </div>
-    </section> -->
+    </section>
+    <!---Skills and tools section-->
+
+    <!---portfolio section-->
+    <section class="portfolio" id="portfolio">
+      <h2>Latest <span> Projects</span></h2>
+      <div class="project-container">
+        <div class="project-cart">
+          <div class="cart-layer">
+            <h3>web Design</h3>
+            <p>Tundi Group Pvt Ltd</p>
+            <i class="bx bx-link-external"></i>
+          </div>
+          <img src="./images/tundi.png" />
+          <div class="img-layer"></div>
+        </div>
+        <div class="project-cart">
+          <div class="cart-layer">
+            <h3>web Design</h3>
+            <p>Ultimodeal Pvt Ltd</p>
+            <i class="bx bx-link-external"></i>
+          </div>
+          <img src="./images/ultimodeal.jpg" />
+          <div class="img-layer"></div>
+        </div>
+        <div class="project-cart">
+          <div class="cart-layer">
+            <h3>web Design</h3>
+            <p>MySecondTeacher BI-enduser</p>
+            <i class="bx bx-link-external"></i>
+          </div>
+          <img src="./images/mst.png" />
+          <div class="img-layer"></div>
+        </div>
+        <div class="project-cart">
+          <div class="cart-layer">
+            <h3>web Design</h3>
+            <p>Sukalpa</p>
+            <i class="bx bx-link-external"></i>
+          </div>
+          <img src="./images/sukalpa.png" alt="youtube" />
+          <div class="img-layer"></div>
+        </div>
+        <div class="project-cart">
+          <div class="cart-layer">
+            <h3>web Design</h3>
+            <p>Youtube clone</p>
+            <i class="bx bx-link-external"></i>
+          </div>
+          <img src="./images/yt.png" />
+          <div class="img-layer"></div>
+        </div>
+
+        <div class="project-cart">
+          <div class="cart-layer">
+            <h3>web Design</h3>
+            <p>E-voting System</p>
+            <i class="bx bx-link-external"></i>
+          </div>
+          <img src="./images/tundi.png" />
+          <div class="img-layer"></div>
+        </div>
+      </div>
+    </section>
     <!---footer section-->
-    <footer>
+    <footer id="contact">
       <div class="footer-content">
         <div class="footer-vector footer-vector-cube"></div>
 
