@@ -3,6 +3,11 @@ $(document).ready(function () {
     console.log($(window).width());
     $(".menu-bar").removeClass("fd-none");
     $("nav").addClass("fd-none");
+    $(".menu-bar").on("click", function () {
+      $(".menu-bar-item").show();
+    });
+
+    $(".menu-bar-item").hide();
   }
 });
 

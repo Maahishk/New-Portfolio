@@ -377,10 +377,9 @@ footer h4 {
 .footer-content {
   position: relative;
   display: flex;
-  flex-direction: row;
+  gap: 2rem;
   justify-content: space-between;
   align-items: flex-start;
-  padding: 2rem 4rem 2rem 4rem;
   border-top: 0.2px solid #3c3c3c;
 }
 .footer-vector {
@@ -425,6 +424,29 @@ footer h4 {
   section {
     padding: 2rem 9% 2rem;
   }
+  .menu-bar-item {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    background-color: var(--bg-color);
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+  }
+  .menu-bar-item a {
+    text-decoration: none;
+    color: white;
+    font-weight: lighter;
+    cursor: pointer;
+    &:hover {
+      color: var(--hover-text-color);
+    }
+  }
   .home {
     flex-direction: column;
   }
@@ -439,10 +461,11 @@ footer h4 {
     object-position: bottom;
   }
   .home .home-content h3 {
-    height: 30px;
+    height: 24px;
   }
   p {
-    font-size: 12px;
+    font-size: 14px;
+    font-weight: lighter;
     width: 100%;
     text-align: center;
     line-height: 1rem;
@@ -466,6 +489,10 @@ footer h4 {
 
   .portfolio .project-container {
     columns: 1;
+  }
+  .footer-content {
+    flex-direction: column;
+    padding: 1rem 2rem 1rem 2rem;
   }
 }
 @media screen and (min-width: 760px) {
@@ -528,5 +555,9 @@ footer h4 {
   }
   .portfolio .project-container {
     columns: 3;
+  }
+  .footer-content {
+    flex-direction: row;
+    padding: 2rem 4rem 2rem 4rem;
   }
 }
