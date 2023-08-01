@@ -1,4 +1,22 @@
 $(document).ready(function () {
+  /**scroll reveal */
+  ScrollReveal({
+    reset: true,
+    distance: "80px",
+    duration: 2000,
+    delay: 200,
+  });
+  ScrollReveal().reveal(".home-content, .about-me, h2", { origin: "top" });
+  ScrollReveal().reveal(".img-group, .skill-cart, .project-cart", {
+    origin: "bottom",
+  });
+  ScrollReveal().reveal(".home-content h1, .profile-img", {
+    origin: "left",
+  });
+  ScrollReveal().reveal(".home-content p, .about-me p", {
+    origin: "right",
+  });
+
   if ($(window).width() < 800) {
     $(".menu-bar").removeClass("fd-none");
     $("nav").addClass("fd-none");
