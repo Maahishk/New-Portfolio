@@ -1,4 +1,24 @@
 $(document).ready(function () {
+  // let section = document.querySelectorAll("section");
+  // let navlinks = document.querySelectorAll("header nav a");
+
+  // window.onscroll = () => {
+  //   section.forEach((sec) => {
+  //     let top = window.scrollY;
+  //     let offset = sec.offsetTop - 150;
+  //     let height = sec.offsetHeight;
+  //     let id = sec.getAttribute("id");
+
+  //     if (top >= offset && top < offset + height) {
+  //       navlinks.forEach((links) => {
+  //         links.removeClass("active");
+  //         document
+  //           .querySelector("header nav a[href*=" + id + "]")
+  //           .addClass("active");
+  //       });
+  //     }
+  //   });
+  // };
   /**scroll reveal */
   ScrollReveal({
     reset: true,
@@ -7,13 +27,16 @@ $(document).ready(function () {
     delay: 200,
   });
   ScrollReveal().reveal(".home-content, .about-me, h2", { origin: "top" });
-  ScrollReveal().reveal(".img-group, .skill-cart, .project-cart", {
-    origin: "bottom",
-  });
-  ScrollReveal().reveal(".home-content h1, .profile-img", {
+  ScrollReveal().reveal(
+    ".img-group, .skill-cart, .project-cart, .st-content img, .footer-link, .footer-content ul",
+    {
+      origin: "bottom",
+    }
+  );
+  ScrollReveal().reveal(".home-content h1, .profile-img, .footer-content h3", {
     origin: "left",
   });
-  ScrollReveal().reveal(".home-content p, .about-me p", {
+  ScrollReveal().reveal(".home-content p, .about-me p, .footer-content h4", {
     origin: "right",
   });
 
@@ -27,29 +50,11 @@ $(document).ready(function () {
     });
 
     $(".menu-bar-item a").on("click", function () {
-      console.log("click");
       $(".menu-bar-item").css("display", "none");
     });
   }
+  $("header nav a").on("click", function (e) {
+    $("header nav a").removeClass("active");
+    $(e.target).addClass("active");
+  });
 });
-
-// let section = document.querySelectorAll("section");
-// let navlinks = document.querySelectorAll("header nav a");
-
-// window.onscroll = () => {
-//   section.forEach((sec) => {
-//     let top = window.scrollY;
-//     let offset = sec.offsetTop - 150;
-//     let height = sec.offsetHeight;
-//     let id = sec.getAttribute("id");
-
-//     if (top >= offset && top < offset + height) {
-//       navlinks.forEach((links) => {
-//         links.removeClass("active");
-//         document
-//           .querySelector("header nav a[href*=" + id + "]")
-//           .addClass("active");
-//       });
-//     }
-//   });
-// };

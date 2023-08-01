@@ -60,7 +60,7 @@ header {
 header > h1 {
   letter-spacing: 0.3rem;
 }
-active {
+.active {
   color: var(--hover-text-color);
   font-weight: 600;
 }
@@ -355,7 +355,7 @@ section h2 {
 }
 .st-container .st-content {
   width: 100%;
-  padding: 2rem 1rem 2rem 1rem;
+  padding: 0rem 1rem 0rem 1rem;
   columns: 4;
   overflow: hidden;
   transition: 0.5s ease;
