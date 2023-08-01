@@ -1,24 +1,4 @@
 $(document).ready(function () {
-  // let section = document.querySelectorAll("section");
-  // let navlinks = document.querySelectorAll("header nav a");
-
-  // window.onscroll = () => {
-  //   section.forEach((sec) => {
-  //     let top = window.scrollY;
-  //     let offset = sec.offsetTop - 150;
-  //     let height = sec.offsetHeight;
-  //     let id = sec.getAttribute("id");
-
-  //     if (top >= offset && top < offset + height) {
-  //       navlinks.forEach((links) => {
-  //         links.removeClass("active");
-  //         document
-  //           .querySelector("header nav a[href*=" + id + "]")
-  //           .addClass("active");
-  //       });
-  //     }
-  //   });
-  // };
   /**scroll reveal */
   ScrollReveal({
     reset: true,
@@ -40,6 +20,27 @@ $(document).ready(function () {
     origin: "right",
   });
 
+  let section = document.querySelectorAll("section");
+  let navlinks = document.querySelectorAll("header nav a");
+
+  window.onscroll = () => {
+    section.forEach((sec) => {
+      let top = window.scrollY;
+      let offset = sec.offsetTop - 150;
+      let height = sec.offsetHeight;
+      let id = sec.getAttribute("id");
+
+      if (top >= offset && top < offset + height) {
+        navlinks.forEach((links) => {
+          links.classList.remove("active");
+          document
+            .querySelector("header nav a[href*=" + id + "]")
+            .classList.add("active");
+        });
+      }
+    });
+  };
+
   if ($(window).width() < 800) {
     $(".menu-bar").removeClass("fd-none");
     $("nav").addClass("fd-none");
@@ -53,8 +54,4 @@ $(document).ready(function () {
       $(".menu-bar-item").css("display", "none");
     });
   }
-  $("header nav a").on("click", function (e) {
-    $("header nav a").removeClass("active");
-    $(e.target).addClass("active");
-  });
 });
