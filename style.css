@@ -234,19 +234,18 @@ button[type="button"] {
   gap: 1rem;
 }
 
-.about h2 span,
-.portfolio h2 span {
+h2 span {
   color: var(--hover-text-color);
 }
 /*capabilities cart*/
-.skill-container {
+.capabilities-container {
   display: flex;
   flex-direction: row;
   gap: 2rem;
   justify-content: space-between;
   align-items: center;
 }
-.skill-cart {
+.capabilities-cart {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -263,7 +262,7 @@ button[type="button"] {
     transform: scale(1.02);
   }
 }
-.skill-cart ul {
+.capabilities-cart ul {
   list-style: none;
   text-align: center;
 }
@@ -274,7 +273,7 @@ button[type="button"] {
   justify-content: center;
   align-items: center;
 }
-.capabilities-section h2 {
+section h2 {
   text-align: center;
 }
 /*portfolio css*/
@@ -345,6 +344,35 @@ button[type="button"] {
 .project-cart:hover .cart-layer {
   transform: translateY(0);
 }
+/* skills and tools*/
+.st-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  text-align: center;
+}
+.st-container .st-content {
+  width: 100%;
+  padding: 2rem 1rem 2rem 1rem;
+  columns: 4;
+  overflow: hidden;
+  transition: 0.5s ease;
+}
+.st-container .st-content img {
+  cursor: pointer;
+  width: 100%;
+  object-fit: contain;
+  background: transparent;
+  margin-top: 2rem;
+  &:hover {
+    transform: scale(1.02);
+    border: 1px solid var(--hover-text-color);
+    box-shadow: 0 0 1rem var(--hover-text-color);
+  }
+}
+
 /*footer css*/
 footer {
   width: 100%;
