@@ -1,13 +1,17 @@
 $(document).ready(function () {
   if ($(window).width() < 800) {
-    console.log($(window).width());
     $(".menu-bar").removeClass("fd-none");
     $("nav").addClass("fd-none");
-    $(".menu-bar").on("click", function () {
+    $(".menu-bar-item").hide();
+    $(".menu-bar i").on("click", function () {
       $(".menu-bar-item").show();
+      $(".menu-bar-item").css("display", "flex");
     });
 
-    $(".menu-bar-item").hide();
+    $(".menu-bar-item a").on("click", function () {
+      console.log("click");
+      $(".menu-bar-item").css("display", "none");
+    });
   }
 });
 

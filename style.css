@@ -98,8 +98,6 @@ active {
 .home .img-group #spaceman {
   animation: float_effect 2s ease-in-out infinite alternate-reverse both;
   position: absolute;
-  bottom: 0rem;
-  right: 0rem;
 }
 
 .home .home-content h3 {
@@ -304,9 +302,7 @@ button[type="button"] {
   border-radius: 0.8rem;
   border: none;
   width: 100%;
-  height: 14rem;
   overflow: hidden;
-  margin-bottom: 2rem;
   position: relative;
   cursor: pointer;
 }
@@ -403,7 +399,7 @@ footer h4 {
   }
 }
 
-@media screen and (max-width: 760px) {
+@media (max-width: 767px) {
   header {
     padding: 0.5rem 2rem 0.5rem 2rem;
   }
@@ -422,7 +418,7 @@ footer h4 {
     font-size: 1.6rem;
   }
   section {
-    padding: 2rem 9% 2rem;
+    padding: 1rem 4% 1rem;
   }
   .menu-bar-item {
     width: 100%;
@@ -430,7 +426,6 @@ footer h4 {
     position: absolute;
     top: 0;
     right: 0;
-    display: flex;
     flex-direction: column;
     gap: 4rem;
     background-color: var(--bg-color);
@@ -456,9 +451,13 @@ footer h4 {
     gap: 1rem;
   }
   .home img {
-    width: 300px;
+    width: 260px;
     object-fit: contain;
     object-position: bottom;
+  }
+  .home .img-group #spaceman {
+    bottom: 0rem;
+    left: 10%;
   }
   .home .home-content h3 {
     height: 24px;
@@ -490,12 +489,16 @@ footer h4 {
   .portfolio .project-container {
     columns: 1;
   }
+  .project-container .project-cart {
+    height: 10rem;
+    margin-bottom: 1rem;
+  }
   .footer-content {
     flex-direction: column;
     padding: 1rem 2rem 1rem 2rem;
   }
 }
-@media screen and (min-width: 760px) {
+@media (min-width: 768px) {
   header {
     padding: 1rem 4rem 1rem 4rem;
   }
@@ -543,6 +546,10 @@ footer h4 {
     object-fit: contain;
     object-position: bottom;
   }
+  .home .img-group #spaceman {
+    bottom: -2rem;
+    left: 0rem;
+  }
   .about {
     flex-direction: row;
   }
@@ -556,8 +563,13 @@ footer h4 {
   .portfolio .project-container {
     columns: 3;
   }
+  .project-container .project-cart {
+    margin-bottom: 2rem;
+    height: 14rem;
+  }
   .footer-content {
     flex-direction: row;
     padding: 2rem 4rem 2rem 4rem;
+    margin-bottom: 2rem;
   }
 }
